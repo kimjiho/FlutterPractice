@@ -14,6 +14,7 @@ class BoxSlider extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 20),
           Text('지금 뜨는 콘텐츠'),
           Container(
             height: 120,
@@ -43,7 +44,7 @@ List<Widget> makeBoxImages(BuildContext context, List<Movie> movies) {
           );
         },
         child: Container(
-          margin: EdgeInsets.only(right: 10),
+          margin: EdgeInsets.only(left: 10),
           child: Align(
             alignment: Alignment.centerLeft,
             child: Image.asset(

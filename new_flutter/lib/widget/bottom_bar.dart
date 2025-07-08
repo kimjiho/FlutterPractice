@@ -18,12 +18,12 @@ class Bottom extends StatelessWidget {
               text: '검색',
             ),
             Tab(
-              icon: Icon(Icons.download, color: Colors.white),
-              text: '다운로드',
+              icon: Icon(Icons.favorite, color: Colors.white),
+              text: '즐겨찾기',
             ),
             Tab(
-              icon: Icon(Icons.settings, color: Colors.white),
-              text: '설정',
+              icon: Icon(Icons.more, color: Colors.white),
+              text: '더보기',
             ),
           ],
           labelColor: Colors.white,

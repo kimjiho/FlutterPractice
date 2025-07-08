@@ -38,7 +38,7 @@ class _CarouselImageState extends State<CarouselImage> {
     return Container(
       child: Column(
         children: [
-          Container(padding: EdgeInsets.all(20)),
+          Container(padding: EdgeInsets.all(40)),
 
           CarouselSlider(
             items: images,
@@ -64,8 +64,13 @@ class _CarouselImageState extends State<CarouselImage> {
           ),
 
           Container(
+            decoration: BoxDecoration(
+              color: Colors.black54,
+              borderRadius: BorderRadius.circular(4),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Column(
                   children: [
@@ -78,21 +83,34 @@ class _CarouselImageState extends State<CarouselImage> {
                         });
                       },
                     ),
-                    SizedBox(width: 10),
                     Text('내가 짐한 콘텐츠', style: TextStyle(fontSize: 11)),
                   ],
                 ),
 
-                Container(
-                  padding: EdgeInsets.only(right: 10),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Row(
-                      children: [
-                        Icon(Icons.play_arrow, color: Colors.black),
-                        Padding(padding: EdgeInsets.all(3)),
-                        Text('재생', style: TextStyle(color: Colors.black)),
-                      ],
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      //color: Colors.redAccent,
+                    ),
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+
+                      child: Column(
+                        children: [
+                          Icon(Icons.play_arrow, color: Colors.white),
+                          SizedBox(height: 5),
+                          Text(
+                            '재생',
+                            style: TextStyle(color: Colors.white, fontSize: 11),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -121,6 +139,8 @@ class _CarouselImageState extends State<CarouselImage> {
               ],
             ),
           ),
+
+          SizedBox(height: 20),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

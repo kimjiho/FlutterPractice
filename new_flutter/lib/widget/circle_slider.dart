@@ -13,6 +13,7 @@ class CircleSlider extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(height: 20),
           Text('미리보기'),
           Container(
             height: 120,
@@ -35,7 +36,7 @@ List<Widget> makeCircleImages(List<Movie> movies) {
       InkWell(
         onTap: () {},
         child: Container(
-          margin: EdgeInsets.only(right: 10),
+          margin: EdgeInsets.only(left: 10),
           child: CircleAvatar(
             radius: 48,
             backgroundImage: AssetImage('images/${movie.poster}'),

@@ -58,14 +58,14 @@ class _DetailScreenState extends State<DetailScreen> {
                               Container(
                                 padding: EdgeInsets.all(7),
                                 child: Text(
-                                  '99% 일치 2019 15+ 시즌 1개',
+                                  '99% 일치\n2019 15+ 시즌 1개',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(fontSize: 13),
                                 ),
                               ),
 
                               Container(
-                                padding: EdgeInsets.all(7),
+                                padding: EdgeInsets.all(4),
                                 child: Text(
                                   widget.movie.title,
                                   textAlign: TextAlign.center,
@@ -78,10 +78,10 @@ class _DetailScreenState extends State<DetailScreen> {
 
                               Container(
                                 padding: EdgeInsets.all(3),
-                                child: ElevatedButton(
+                                child: OutlinedButton(
                                   onPressed: () {},
                                   style: ElevatedButton.styleFrom(
-                                    backgroundColor: Colors.red,
+                                    //backgroundColor: Colors.redAccent,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(5),
                                     ),
@@ -93,7 +93,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                         Icons.play_arrow,
                                         color: Colors.white,
                                       ),
-                                      SizedBox(width: 5),
+                                      SizedBox(width: 6),
                                       Text(
                                         '재생',
                                         style: TextStyle(color: Colors.white),
@@ -104,9 +104,10 @@ class _DetailScreenState extends State<DetailScreen> {
                               ),
 
                               Container(
+                                padding: EdgeInsets.fromLTRB(16, 12, 16, 0),
                                 alignment: Alignment.topLeft,
                                 child: Text(
-                                  '콘텐츠 설명 블라블라블라',
+                                  '어느 날 돌풍과 함께 패러글라이딩 사고로 북한에 불시착한 재벌 2세 패션업계 사장 윤세리와 그녀를 숨기고 지키다 사랑하게 되는 특급 장교 리정혁의 절대 극비 로맨스를 그린다.',
                                   style: TextStyle(
                                     fontSize: 13,
                                     color: Colors.white70,
@@ -141,7 +142,7 @@ class _DetailScreenState extends State<DetailScreen> {
 
 Widget makeMenuButtons({bool like = false}) {
   return Container(
-    padding: EdgeInsets.all(7),
+    padding: EdgeInsets.all(16),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -166,7 +167,7 @@ Widget makeMenuButtons({bool like = false}) {
             children: [
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.thumb_up, color: Colors.white),
+                icon: Icon(Icons.info, color: Colors.white),
               ),
 
               Text('정보', style: TextStyle(fontSize: 11, color: Colors.white70)),

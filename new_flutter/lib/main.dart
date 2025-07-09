@@ -5,11 +5,12 @@ import 'package:new_flutter/screen/more_screen.dart';
 import 'package:new_flutter/screen/search_screen.dart';
 import 'package:new_flutter/widget/bottom_bar.dart';
 
-void main() {
+void main() async {
   runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  @override
   _MyAppState createState() => _MyAppState();
 }
 

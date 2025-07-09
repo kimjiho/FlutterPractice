@@ -5,26 +5,14 @@ class Bottom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.black,
-      child: Container(
-        height: 50,
+      child: SizedBox(
+        height: 56,
         child: TabBar(
           tabs: [
-            Tab(
-              icon: Icon(Icons.home, color: Colors.white),
-              text: '홈',
-            ),
-            Tab(
-              icon: Icon(Icons.search, color: Colors.white),
-              text: '검색',
-            ),
-            Tab(
-              icon: Icon(Icons.favorite, color: Colors.white),
-              text: '즐겨찾기',
-            ),
-            Tab(
-              icon: Icon(Icons.more, color: Colors.white),
-              text: '더보기',
-            ),
+            Tab(icon: Icon(Icons.home, color: Colors.white)),
+            Tab(icon: Icon(Icons.search, color: Colors.white)),
+            Tab(icon: Icon(Icons.favorite, color: Colors.white)),
+            Tab(icon: Icon(Icons.more, color: Colors.white)),
           ],
           labelColor: Colors.white,
           unselectedLabelColor: Colors.white60,

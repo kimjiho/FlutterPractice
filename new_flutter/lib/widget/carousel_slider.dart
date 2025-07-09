@@ -57,19 +57,17 @@ class _CarouselImageState extends State<CarouselImage> {
 
           Container(
             padding: EdgeInsets.all(10),
-            child: Text(
-              _currentKeyword,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
+            child: Text(_currentKeyword, style: TextStyle(fontSize: 11)),
           ),
 
           Container(
+            padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: Colors.black54,
+              color: Colors.black87,
               borderRadius: BorderRadius.circular(4),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Column(
@@ -83,35 +81,21 @@ class _CarouselImageState extends State<CarouselImage> {
                         });
                       },
                     ),
-                    Text('내가 짐한 콘텐츠', style: TextStyle(fontSize: 11)),
+                    Text('내가 찜한 콘텐츠', style: TextStyle(fontSize: 11)),
                   ],
                 ),
 
-                InkWell(
-                  onTap: () {},
-                  child: Container(
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4),
-                      //color: Colors.redAccent,
-                    ),
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(16, 8, 16, 8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(4),
+                Container(
+                  padding: EdgeInsets.only(right: 10),
+                  child: Column(
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.play_arrow, color: Colors.white),
                       ),
 
-                      child: Column(
-                        children: [
-                          Icon(Icons.play_arrow, color: Colors.white),
-                          SizedBox(height: 5),
-                          Text(
-                            '재생',
-                            style: TextStyle(color: Colors.white, fontSize: 11),
-                          ),
-                        ],
-                      ),
-                    ),
+                      Text('재생', style: TextStyle(fontSize: 11)),
+                    ],
                   ),
                 ),
 
@@ -152,7 +136,7 @@ class _CarouselImageState extends State<CarouselImage> {
   }
 }
 
-List<Widget> makeIndicator(List list, int _currentPage) {
+List<Widget> makeIndicator(List list, int currentPage) {
   return list.map((item) {
     int index = list.indexOf(item);
     return Container(
@@ -161,7 +145,7 @@ List<Widget> makeIndicator(List list, int _currentPage) {
       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: _currentPage == index ? Colors.white : Colors.grey,
+        color: currentPage == index ? Colors.white : Colors.grey,
       ),
     );
   }).toList();

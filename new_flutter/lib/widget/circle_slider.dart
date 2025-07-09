@@ -15,7 +15,7 @@ class CircleSlider extends StatelessWidget {
         children: [
           SizedBox(height: 20),
           Text('미리보기'),
-          Container(
+          SizedBox(
             height: 120,
             child: ListView(
               scrollDirection: Axis.horizontal,

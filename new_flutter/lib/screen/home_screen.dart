@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_flutter/model/model_move.dart';
+import 'package:new_flutter/screen/exam_screen.dart';
 import 'package:new_flutter/widget/box_slider.dart';
 import 'package:new_flutter/widget/carousel_slider.dart';
 import 'package:new_flutter/widget/circle_slider.dart';
@@ -13,25 +14,25 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Movie> movies = [
     Movie.fromMap({
       'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지',
+      'keyword': '사랑/로맨스/판타지1',
       'poster': 'test_movie_1.png',
       'like': false,
     }),
     Movie.fromMap({
       'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지22',
-      'poster': 'test_movie_1.png',
+      'keyword': '사랑/로맨스/판타지2',
+      'poster': 'bbongflix_logo.png',
       'like': true,
     }),
     Movie.fromMap({
       'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지333',
+      'keyword': '사랑/로맨스/판타지3',
       'poster': 'test_movie_1.png',
       'like': false,
     }),
     Movie.fromMap({
       'title': '사랑의 불시착',
-      'keyword': '사랑/로맨스/판타지444',
+      'keyword': '사랑/로맨스/판타지4',
       'poster': 'test_movie_1.png',
       'like': true,
     }),
@@ -79,7 +80,12 @@ class TopBar extends StatelessWidget {
 
           InkWell(
             onTap: () {
-              // Handle search action
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  fullscreenDialog: true,
+                  builder: (context) => ExamScreen(),
+                ),
+              );
             },
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -87,14 +93,20 @@ class TopBar extends StatelessWidget {
             ),
           ),
 
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            child: Text('영화', style: TextStyle(fontSize: 14.0)),
+          InkWell(
+            onTap: () {},
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              child: Text('영화', style: TextStyle(fontSize: 14.0)),
+            ),
           ),
 
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-            child: Text('내가 찜한 콘텐츠', style: TextStyle(fontSize: 14.0)),
+          InkWell(
+            onTap: () {},
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              child: Text('내가 찜한 콘텐츠', style: TextStyle(fontSize: 14.0)),
+            ),
           ),
         ],
       ),
